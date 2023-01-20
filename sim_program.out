@@ -1,0 +1,87 @@
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2-1_Full64; Runtime version R-2020.12-SP2-1_Full64;  Dec  1 23:23 2022
+VCD+ Writer R-2020.12-SP2-1_Full64 Copyright (c) 1991-2020 by Synopsys Inc.
+@@
+@@
+@@                     0  Asserting System reset......
+@@
+@@                     0 : System STILL at reset, can't show anything
+@@
+@@
+@@                   100 : System STILL at reset, can't show anything
+@@
+@@
+@@                   200 : System STILL at reset, can't show anything
+@@
+@@
+@@                   300 : System STILL at reset, can't show anything
+@@
+@@                   350  Deasserting System reset......
+@@
+@@
+@@@ Unified Memory contents hex on left, decimal on right: 
+@@@
+@@@ mem[    0] = 000021b700800113 : 37069871120659
+@@@ mem[    8] = 010191937bb18193 : 72499131636089235
+@@@ mem[   16] = ee608093000030b7 : 17176870347639632055
+@@@ mem[   24] = 000010b70011e1b3 : 18378166231475
+@@@ mem[   32] = 00c1919387b08093 : 54484733327868051
+@@@ mem[   40] = 0b0000930011e1b3 : 792634165778571699
+@@@ mem[   48] = 0011e1b300c19193 : 5033233532162451
+@@@ mem[   56] = 008191930fd00093 : 36470332807184531
+@@@ mem[   64] = 000012370011e1b3 : 20027433673139
+@@@ mem[   72] = 00c21213b5020213 : 54626021332353555
+@@@ mem[   80] = 001262334f300093 : 5174522092191891
+@@@ mem[   88] = 0042121302d00093 : 18597221323767955
+@@@ mem[   96] = 0000029300126233 : 2830384652851
+@@@ mem[  104] = 0102a31300128293 : 72799845992268435
+@@@ mem[  112] = 004585b3023105b3 : 19568777275442611
+@@@ mem[  120] = 0046063302358633 : 19710064519906867
+@@@ mem[  128] = 004686b3023606b3 : 19851351764108979
+@@@ mem[  136] = 0041013302368133 : 18297192078278963
+@@@ mem[  144] = 010656130105d593 : 73841083519718803
+@@@ mem[  152] = 010157130106d693 : 72434808147859091
+@@@ mem[  160] = fc0312e301008093 : 18159378888671658131
+@@@ mem[  168] = 0000000010500073 : 273678451
+@@@
+@@@
+@@                 55800 : System halted
+@@
+@@@ System halted on WFI instruction
+@@@
+@@
+@@  555 cycles / 282 instrs = 1.968085 CPI
+@@
+@@  5540.00 ns total time to execute
+@@
+
+
+An unexpected termination has occurred in ./simv due to a signal: Segmentation fault
+Hostname caen-vnc-mi05.engin.umich.edu
+
+
+Command line: ./simv
+
+--- Stack trace follows:
+
+Dumping VCS Annotated Stack:
+#0  0x000015554bc263cb in waitpid () from /lib64/libc.so.6
+#1  0x000015554bb87bff in do_system () from /lib64/libc.so.6
+#2  0x00001555544a80bb in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e639d2928478c79b3f673f99203bcf8be64600612100082236bffb2007f1e0ef9 () from /usr/caen/vcs-2020.12-SP2-1/linux64/lib/liberrorinf.so
+#3  0x00001555544a9ba7 in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313efba706aab251478fa49e66610e453774633a6c152e7ef778f2202cda681f3d4e () from /usr/caen/vcs-2020.12-SP2-1/linux64/lib/liberrorinf.so
+#4  0x00001555544a2102 in SNPSle_d35ca1ff70d465c2b9b1a72eee90a50630165806651fae961ce1525e42aba82d () from /usr/caen/vcs-2020.12-SP2-1/linux64/lib/liberrorinf.so
+#5  0x000015554fccbfbb in SNPSle_64133461705005bb725549e2e6fa1b3f () from /usr/caen/vcs-2020.12-SP2-1/linux64/lib/libvcsnew.so
+#6  0x000015554f95c659 in SNPSle_82244d58c54c18c70d63edc9becab634 () from /usr/caen/vcs-2020.12-SP2-1/linux64/lib/libvcsnew.so
+#8  0x000015554bbbb39e in fputc () from /lib64/libc.so.6
+#9  0x000000000040bfb0 in print_close ()
+#10 0x0000155554e795f4 in N_VCSgd_iAVhC () from /home/stilex/copy/group12f22/simv.daidir/_2808320_archive_1.so
+#11 0x000015554fb51752 in SNPSle_63c7abb936d47b07d29d61775f9dbe8c1486beb9213552a3 () from /usr/caen/vcs-2020.12-SP2-1/linux64/lib/libvcsnew.so
+#12 0x000015554fce2b67 in SNPSle_490598bfebcc8e81efcf3d1815066cc9 () from /usr/caen/vcs-2020.12-SP2-1/linux64/lib/libvcsnew.so
+#13 0x000015554fcfb635 in SNPSle_490598bfebcc8e81 () from /usr/caen/vcs-2020.12-SP2-1/linux64/lib/libvcsnew.so
+#14 0x000000000040c353 in main ()
+
+Process VmPeak: 315548 kb, VmSize: 315548 kb
+System Free Memory: 11930540 kb, System Free Swap: 9739432 kb
+
+No context available
